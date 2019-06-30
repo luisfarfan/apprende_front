@@ -1,0 +1,7 @@
+<h1>ESTAMOS EN EL MODULO DE PROYECTOS!!</h1>
+
+<div fxLayoutAlign="center">
+  <button (click)="openModal()" mat-raised-button color="accent">Agregar proyecto</button>
+</div>
+
+<app-project-list (updated)="getProjects()" *ngIf="projects" [projects]="projects"></app-project-list>

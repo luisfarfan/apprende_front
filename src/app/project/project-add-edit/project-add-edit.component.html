@@ -1,0 +1,21 @@
+<form [formGroup]="projectForm">
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input formControlName="name" type="text" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descripción</mat-label>
+    <input formControlName="description" type="text" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Rating</mat-label>
+    <input formControlName="rating" type="number" matInput>
+  </mat-form-field>
+
+  <div>
+    <button [disabled]="projectForm.invalid" (click)="save()" mat-raised-button
+            color="accent">{{ project ? 'Editar' : 'Agregar'}}</button>
+  </div>
+</form>

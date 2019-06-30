@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      {{ project.name }}
+    </mat-card-title>
+
+  </mat-card-header>
+
+  <mat-card-content>
+    {{ project.description }}
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button (click)="editProject()" mat-raised-button>Editar</button>
+
+    <button (click)="delete()" mat-raised-button color="warn">Eliminar</button>
+
+  </mat-card-actions>
+</mat-card>
